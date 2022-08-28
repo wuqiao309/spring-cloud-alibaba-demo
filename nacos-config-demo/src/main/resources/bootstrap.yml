@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: nacos-config-demo
+  cloud:
+    nacos:
+      config:
+        server-addr: ubuntu:8848
+        file-extension: yaml
+        namespace: cc7f8945-df35-4ab6-a7fd-6e765aaad806 # 命名空间ID
+        extension-configs:
+          - data-id: test.yaml
+            file-extension: yaml
+            refresh: true
+
+
+# 1. 新建命名空间 ${spring.application.name}
+# 2. 命名空间下新增文件 ${spring.application.name}.yaml
+# 3. 导入特定文件  extension-configs/shared-configs
+# 4. 使用： @RefreshScope、@Value
