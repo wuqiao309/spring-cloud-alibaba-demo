@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: provider-demo
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ubuntu:8848
+
