@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: dubbo-consumer-demo
+dubbo:
+  application:
+    name: ${spring.application.name}
+  registry:
+    address: nacos://ubuntu:8848
+  protocol:
+    name: dubbo
+
+server:
+  port: 8080
