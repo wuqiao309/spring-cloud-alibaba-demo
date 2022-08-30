@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: dubbo-provider-demo
+dubbo:
+  application:
+    name: ${spring.application.name}
+  registry:
+    address: nacos://ubuntu:8848
+  protocol:
+    name: dubbo
+    port: 8001
+#  scan:
+#    base-packages:
+#      - providerdemo.service.impl1
