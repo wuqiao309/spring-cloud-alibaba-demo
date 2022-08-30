@@ -20,12 +20,16 @@
     <modules>
         <module>provider-demo</module>
         <module>nacos-config-demo</module>
+        <module>dubbo-provider-demo</module>
+        <module>dubbo-consumer-demo</module>
+        <module>dubbo-provider-sdk</module>
     </modules>
 
     <properties>
         <java.version>11</java.version>
         <spring-cloud.version>Hoxton.SR12</spring-cloud.version>
         <spring-cloud-alibaba.version>2.2.8.RELEASE</spring-cloud-alibaba.version>
+        <dubbo.version>2.7.17</dubbo.version>
     </properties>
 
     <dependencyManagement>
@@ -43,6 +47,11 @@
                 <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
