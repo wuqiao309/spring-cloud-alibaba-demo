@@ -1,6 +1,11 @@
 spring:
   application:
     name: dubbo-consumer-demo
+  cloud:
+    sentinel:
+      transport:
+        dashboard: ubuntu:8080
+        port: 8719
 dubbo:
   application:
     name: ${spring.application.name}
