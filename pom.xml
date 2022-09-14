@@ -23,6 +23,7 @@
         <module>dubbo-provider-demo</module>
         <module>dubbo-consumer-demo</module>
         <module>dubbo-provider-sdk</module>
+        <module>security-demo</module>
     </modules>
 
     <properties>
