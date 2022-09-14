@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: auth-demo
+  redis:
+    host: ubuntu
+    port: 6379
+server:
+  port: 8080
