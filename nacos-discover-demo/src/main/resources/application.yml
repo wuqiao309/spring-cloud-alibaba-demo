@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: nacos-discover-demo
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ubuntu:8848
+server:
+  port: 8021
