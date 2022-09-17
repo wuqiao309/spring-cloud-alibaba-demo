@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: nacos-consumer-demo
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ubuntu:8848
+server:
+  port: 8022
+
+# 指定调用特定微服务的负载均衡算法。
+nacos-discover-demo: # 微服务名
+  ribbon:
+    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule
+
+# 默认懒加载。改为饥饿加载
+ribbon:
+  eager-load:
+    enabled: true
+    clients: nacos-discover-demo
+
