@@ -10,7 +10,6 @@ import feign.DemoFeignInterface;
  * Created on 2022-09-17
  */
 @RestController
-@RequestMapping("/feign")
 public class FeignDemoController implements DemoFeignInterface {
     @Override
     public String demo(Integer uid) {

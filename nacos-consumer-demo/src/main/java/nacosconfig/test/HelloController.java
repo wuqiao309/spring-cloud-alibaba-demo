@@ -1,6 +1,7 @@
 package nacosconfig.test;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -20,7 +21,7 @@ public class HelloController {
     @Autowired
     private DemoClient demoClient;
 
-    @RequestMapping("/feign/demo/hello")
+    @PostMapping("/feign/demo/hello")
     public String hello2() {
         return demoClient.demo(1232312);
     }
