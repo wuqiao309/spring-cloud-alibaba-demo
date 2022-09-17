@@ -11,9 +11,8 @@
 
     <artifactId>nacos-consumer-loadbalancer-demo</artifactId>
     <description>
-        使用 loadBalancer 作为负载均衡器，排除 ribbon
-        使用 nacos 作为注册中心
-
+        使用 nacos 作为注册中心，使用 loadBalancer 作为负载均衡器，排除 ribbon。
+        指定 loadBalancer 负载均衡策略
     </description>
 
     <properties>
