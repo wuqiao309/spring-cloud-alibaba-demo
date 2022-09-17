@@ -1,4 +1,4 @@
-package nacosconfig.config;
+package nacosconfig.ribbon;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
