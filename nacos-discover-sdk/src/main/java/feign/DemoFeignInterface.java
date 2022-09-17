@@ -1,8 +1,8 @@
 package feign;
 
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @author wuqiao
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/feign")
 public interface DemoFeignInterface {
     @PostMapping("/demo/hello")
-    String demo(
-            @RequestParam("uid") Integer uid
+    DemoResponse demo(
+            @RequestBody DemoRequest request
     );
 }

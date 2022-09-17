@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import feign.DemoRequest;
+import feign.DemoResponse;
 import nacosconfig.feign.DemoClient;
 
 /**
@@ -22,8 +24,10 @@ public class HelloController {
     private DemoClient demoClient;
 
     @PostMapping("/feign/demo/hello")
-    public String hello2() {
-        return demoClient.demo(1232312);
+    public DemoResponse hello2() {
+        DemoRequest demoRequest = new DemoRequest();
+        demoRequest.setUid(123123123);
+        return demoClient.demo(demoRequest);
     }
 
 

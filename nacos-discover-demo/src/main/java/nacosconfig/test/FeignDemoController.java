@@ -1,9 +1,10 @@
 package nacosconfig.test;
 
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import feign.DemoFeignInterface;
+import feign.DemoRequest;
+import feign.DemoResponse;
 
 /**
  * @author wuqiao
@@ -12,8 +13,10 @@ import feign.DemoFeignInterface;
 @RestController
 public class FeignDemoController implements DemoFeignInterface {
     @Override
-    public String demo(Integer uid) {
-        System.out.println(uid);
-        return "hello:" + uid;
+    public DemoResponse demo(DemoRequest request) {
+        System.out.println(request);
+        DemoResponse demoResponse = new DemoResponse();
+        demoResponse.setMsg("hello:" + request.getUid());
+        return demoResponse;
     }
 }
