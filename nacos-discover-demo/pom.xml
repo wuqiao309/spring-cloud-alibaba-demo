@@ -12,6 +12,7 @@
     <artifactId>nacos-discover-demo</artifactId>
     <description>
         nacos做注册中心，服务提供
+        controller继承feign接口
     </description>
 
     <properties>
@@ -30,6 +31,12 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>nacos-discover-sdk</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
