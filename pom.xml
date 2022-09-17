@@ -24,6 +24,10 @@
         <module>dubbo-consumer-demo</module>
         <module>dubbo-provider-sdk</module>
         <module>security-demo</module>
+        <module>gateway-demo</module>
+        <module>nacos-discover-demo</module>
+        <module>nacos-consumer-demo</module>
+        <module>nacos-consumer-loadbalancer-demo</module>
     </modules>
 
     <properties>

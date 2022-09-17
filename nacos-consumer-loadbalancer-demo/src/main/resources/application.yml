@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: nacos-consumer-loadbalancer-demo
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ubuntu:8848
+server:
+  port: 8023
+
