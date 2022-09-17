@@ -19,3 +19,12 @@ ribbon:
     enabled: true
     clients: nacos-discover-demo
 
+# feign日志级别
+feign:
+  client:
+    config:
+      nacos-discover-demo:
+        logger-level: basic
+logging:
+  level:
+    nacosconfig.feign.DemoClient: debug
