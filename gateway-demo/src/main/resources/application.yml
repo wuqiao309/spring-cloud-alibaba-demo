@@ -1,0 +1,31 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: gateway-demo
+  #配置nacos注册中心地址
+  cloud:
+    sentinel:
+      transport:
+        dashboard: ubuntu:8080
+    nacos:
+      discovery:
+        server-addr: ubuntu:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true # 设为true开启通过微服务名访问服务。如http://localhost:8888/微服务名/uri
+      enabled: true # 是否开启网关
+      routes:
+        - id: hello1
+          uri: lb://nacos-consumer-demo
+          predicates:
+            - Path=/a/** # 路径断言
+          filters:
+            - StripPrefix=1
+        - id: hello2
+          uri: lb://nacos-discover-demo
+          predicates:
+            - Path=/b/** # 路径断言
+          filters:
+            - StripPrefix=1
